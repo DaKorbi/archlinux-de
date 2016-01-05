@@ -39,6 +39,7 @@ pacstrap /mnt base base-devel wpa_supplicant
 genfstab -p /mnt > /mnt/etc/fstab
 echo "Die generierte fstab:"
 cat /mnt/etc/fstab
+cp install.sh /mnt/
 echo "Jetzt gehts im arch-chroot weiter..Dann einfach sh /pfad/zum/script.sh 2 zum weitermachen"
 arch-chroot /mnt/
 else
@@ -55,7 +56,7 @@ echo LC_COLLATE=C >> /etc/locale.conf
 echo LANGUAGE=de_DE >> /etc/locale.conf
 echo KEYMAP=de-latin1 > /etc/vconsole.conf
 ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
-echo "Jetzt im locale.gen de_DE mit Ctrl+W suchen"
+echo "Jetzt im locale.gen #de_DE mit Ctrl+W suchen und zu de_DE auskommentieren (insgesammt müssen 3 # entfernt werden)/ndanach mit Ctrl+O speichern und mit Ctrl+X beenden"
 nano /etc/locale.gen
 locale-gen
 mkinitcpio -p linux
