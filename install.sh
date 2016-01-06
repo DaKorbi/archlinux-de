@@ -64,5 +64,5 @@ passwd
 pacman -S grub
 grub-mkconfig -o /boot/grub/grub.cfg
 grub-install /dev/sda
-echo "jetzt noch der Reihe nach: exit\numount /mnt\n reboot"
+echo "jetzt noch der Reihe nach: (exit) (umount /mnt) (reboot)"
 fi
